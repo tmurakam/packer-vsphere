@@ -1,15 +1,19 @@
 #cloud-config
 autoinstall:
   version: 1
-  identity:
-    hostname: ubuntu-server
-    password: "$6$exDY1mhS4KUYCE/2$zmn9ToZwTKLhCw.b4/b.ZRTIZM30JZ4QrOQ2aOXJ8yk96xpcCof0kxKwuX1kqLG/ygbJ1f8wxED22bTL4F46P0"
-    username: ubuntu
 
+  #early-commands:
+  #  - snap set system proxy.http="http://proxy.example.com:8080"
+  #  - snap set system proxy.https="http://proxy.example.com:8080"
+
+  locale: en_US
   keyboard:
     layout: jp
 
-  local: en_US
+  identity:
+    hostname: ubuntu-server
+    username: ubuntu
+    password: "$6$exDY1mhS4KUYCE/2$zmn9ToZwTKLhCw.b4/b.ZRTIZM30JZ4QrOQ2aOXJ8yk96xpcCof0kxKwuX1kqLG/ygbJ1f8wxED22bTL4F46P0"
 
   ssh:
     install-server: true

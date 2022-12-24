@@ -78,4 +78,7 @@ source "vsphere-iso" "ubuntu" {
 
   # Install VMware tools
   tools_upgrade_policy = true
+
+  # Convert to template?
+  convert_to_template = var.convert_to_template
 }

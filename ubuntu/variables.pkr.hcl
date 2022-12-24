@@ -17,3 +17,8 @@ variable "storage_disk_size" {
 variable "network" {
   default = "VM Network"
 }
+
+variable "convert_to_template" {
+  description = "Convert to template?"
+  default = false
+}
