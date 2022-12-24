@@ -33,8 +33,10 @@ source "vsphere-iso" "ubuntu" {
     var.os_iso_path
   ]
 
+  # Provide autoinstall files
   http_directory = "http"
 
+  # Boot and use 'autoinstall'
   boot_wait = "2s"
   boot_command = [
     "<esc><esc><esc>",
@@ -46,4 +48,7 @@ source "vsphere-iso" "ubuntu" {
     "ds=nocloud-net;s=http://{{ .HTTPIP }}:{{ .HTTPPort }}/",
     "<enter>"
   ]
+
+  # Install VMware tools
+  tools_upgrade_policy = true
 }
