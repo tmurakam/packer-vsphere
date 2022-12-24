@@ -38,6 +38,8 @@ source "vsphere-iso" "ubuntu" {
 
   # Boot and use 'autoinstall'
   boot_wait = "2s"
+  /*
+  // For Ubuntu 20.04
   boot_command = [
     "<esc><esc><esc>",
     "<enter><wait>",
@@ -47,6 +49,31 @@ source "vsphere-iso" "ubuntu" {
     "autoinstall ",
     "ds=nocloud-net;s=http://{{ .HTTPIP }}:{{ .HTTPPort }}/",
     "<enter>"
+  ]
+  */
+
+  // For Ubuntu 22.04
+  boot_command = [
+    "<esc><esc><esc><esc>e<wait>",
+    "<del><del><del><del><del><del><del><del>",
+    "<del><del><del><del><del><del><del><del>",
+    "<del><del><del><del><del><del><del><del>",
+    "<del><del><del><del><del><del><del><del>",
+    "<del><del><del><del><del><del><del><del>",
+    "<del><del><del><del><del><del><del><del>",
+    "<del><del><del><del><del><del><del><del>",
+    "<del><del><del><del><del><del><del><del>",
+    "<del><del><del><del><del><del><del><del>",
+    "<del><del><del><del><del><del><del><del>",
+    "<del><del><del><del><del><del><del><del>",
+    "<del><del><del><del><del><del><del><del>",
+    "<del><del><del><del><del><del><del><del>",
+    "<del><del><del><del><del><del><del><del>",
+    "<del><del><del><del><del><del><del><del>",
+    "linux /casper/vmlinuz --- autoinstall ds=\"nocloud-net;seedfrom=http://{{.HTTPIP}}:{{.HTTPPort}}/\"<enter><wait>",
+    "initrd /casper/initrd<enter><wait>",
+    "boot<enter>",
+    "<enter><f10><wait>"
   ]
 
   # Install VMware tools
