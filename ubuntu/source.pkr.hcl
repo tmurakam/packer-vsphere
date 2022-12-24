@@ -4,7 +4,7 @@ source "vsphere-iso" "ubuntu" {
   password = var.vcenter_password
   insecure_connection = true
 
-  vm_name = "example-ubuntu"
+  vm_name = "ubuntu-server"
   host = var.vcenter_host
 
   guest_os_type = "ubuntu64Guest"
@@ -13,19 +13,19 @@ source "vsphere-iso" "ubuntu" {
   ssh_password = "ubuntu"
   ssh_handshake_attempts = 100
 
-  CPUs = 2
-  RAM = 1024
+  CPUs = 4
+  RAM = 4096
   RAM_reserve_all = false
 
   datastore = var.vcenter_datastore
   disk_controller_type = ["pvscsi"]
   storage {
-    disk_size             = 32768
+    disk_size             = var.storage_disk_size
     disk_thin_provisioned = true
   }
 
   network_adapters {
-    network = "VM Network"
+    network      = var.network
     network_card = "vmxnet3"
   }
 
@@ -46,16 +46,4 @@ source "vsphere-iso" "ubuntu" {
     "ds=nocloud-net;s=http://{{ .HTTPIP }}:{{ .HTTPPort }}/",
     "<enter>"
   ]
-}
-
-build {
-  sources = [
-    "source.vsphere-iso.ubuntu"
-  ]
-
-  provisioner "shell" {
-    inline = [
-      "ls /"
-    ]
-  }
 }
