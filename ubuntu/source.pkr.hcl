@@ -4,7 +4,7 @@ source "vsphere-iso" "ubuntu" {
   password = var.vcenter_password
   insecure_connection = true
 
-  vm_name = "ubuntu-server"
+  vm_name = var.vm_name
   host = var.vcenter_host
 
   guest_os_type = "ubuntu64Guest"

@@ -4,7 +4,7 @@ source "vsphere-iso" "rhel" {
   password = var.vcenter_password
   insecure_connection = true
 
-  vm_name = "almalinux"
+  vm_name = var.vm_name
   host = var.vcenter_host
 
   guest_os_type = "rhel8_64Guest"
