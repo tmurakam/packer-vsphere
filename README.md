@@ -21,6 +21,8 @@ vcenter_host = "192.168.1.100"
 vcenter_datastore = "datastore1"
 
 vm_name = "ubuntu-server"
+
+os_version = "22.04"
 os_iso_path = "[datastore1] ISOs/ubuntu-22.04.1-live-server-amd64.iso"
 
 storage_disk_size = 32768
