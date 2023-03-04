@@ -1,9 +1,9 @@
 variable "vcenter_server" {}
-variable "vcenter_username" {}
-variable "vcenter_password" {}
+variable "username" {}
+variable "password" {}
 
-variable "vcenter_host" {}
-variable "vcenter_datastore" {}
+variable "host" {}
+variable "datastore" {}
 
 variable "vm_name" {
   description = "VM name"
@@ -15,7 +15,7 @@ variable "os_version" {
   default = "22.04"
 }
 
-variable "os_iso_path" {
+variable "iso_path" {
   description = "ISO path (ex. [datastore1] ISOs/ubuntu-20.04.2-live-server-amd64.iso)"
 }
 

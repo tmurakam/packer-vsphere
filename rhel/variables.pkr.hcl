@@ -1,16 +1,16 @@
 variable "vcenter_server" {}
-variable "vcenter_username" {}
-variable "vcenter_password" {}
+variable "username" {}
+variable "password" {}
 
-variable "vcenter_host" {}
-variable "vcenter_datastore" {}
+variable "host" {}
+variable "datastore" {}
 
 variable "vm_name" {
   description = "VM name"
   default = "rhel-server"
 }
 
-variable "os_iso_path" {
+variable "iso_path" {
   description = "ISO path (ex. [datastore1] ISOs/AlmaLinux-8.4-x64_64-minimal.iso)"
 }
 

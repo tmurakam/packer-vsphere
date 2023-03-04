@@ -1,11 +1,11 @@
 source "vsphere-iso" "rhel" {
   vcenter_server = var.vcenter_server
-  username = var.vcenter_username
-  password = var.vcenter_password
+  username = var.username
+  password = var.password
   insecure_connection = true
 
   vm_name = var.vm_name
-  host = var.vcenter_host
+  host = var.host
 
   guest_os_type = "rhel8_64Guest"
 
@@ -17,7 +17,7 @@ source "vsphere-iso" "rhel" {
   RAM = 4096
   RAM_reserve_all = false
 
-  datastore = var.vcenter_datastore
+  datastore = var.datastore
   disk_controller_type = ["pvscsi"]
   storage {
     disk_size             = var.storage_disk_size
@@ -30,7 +30,7 @@ source "vsphere-iso" "rhel" {
   }
 
   iso_paths = [
-    var.os_iso_path
+    var.iso_path
   ]
 
   # Provide autoinstall files
