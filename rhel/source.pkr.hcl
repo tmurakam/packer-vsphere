@@ -11,6 +11,7 @@ source "vsphere-iso" "rhel" {
 
   ssh_username = "vsuser"
   ssh_password = "vsuser"
+  ssh_timeout = "10m"
   ssh_handshake_attempts = 100
 
   CPUs = 4
