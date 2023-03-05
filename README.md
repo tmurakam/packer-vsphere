@@ -32,3 +32,7 @@ convert_to_template = true
 ```
 
 Then run `packer build .`
+
+# Limitations
+
+- It seems that you can't use NFS datastore for thin provisioning.
