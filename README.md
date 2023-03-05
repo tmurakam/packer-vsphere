@@ -23,16 +23,19 @@ datastore = "datastore1"
 vm_name = "ubuntu-server"
 
 os_version = "22.04"
-iso_path = "[datastore1] ISOs/ubuntu-22.04.1-live-server-amd64.iso"
+iso_path = "[datastore1] ISOs/ubuntu-22.04.2-live-server-amd64.iso"
 
 storage_disk_size = 32768
 network = "VM Network"
 
-convert_to_template = true
+convert_to_template = false
 ```
 
 Then run `packer build .`
 
 # Limitations
 
-- It seems that you can't use NFS datastore for thin provisioning.
+It seems that when create template with 'convert_to_template = true' on NFS datastore,
+the template becomes thick provisioned.
+To avoid this, you need set conver_to_template = false, and convert to template
+on vSphere console.
