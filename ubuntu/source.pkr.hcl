@@ -47,8 +47,8 @@ source "vsphere-iso" "ubuntu" {
 
   guest_os_type = "ubuntu64Guest"
 
-  ssh_username = "ubuntu"
-  ssh_password = "ubuntu"
+  ssh_username = "vsphere"
+  ssh_password = "vsphere"
   ssh_timeout = "10m"
   ssh_handshake_attempts = 100
 

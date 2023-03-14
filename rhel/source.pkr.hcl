@@ -9,8 +9,8 @@ source "vsphere-iso" "rhel" {
 
   guest_os_type = "rhel8_64Guest"
 
-  ssh_username = "vsuser"
-  ssh_password = "vsuser"
+  ssh_username = "vsphere"
+  ssh_password = "vsphere"
   ssh_timeout = "10m"
   ssh_handshake_attempts = 100
 
