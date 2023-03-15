@@ -20,3 +20,7 @@ autoinstall:
     install-server: true
     allow-pw: true
     authorized-keys: []
+
+  late-commands:
+    - |
+      echo 'vsphere        ALL=(ALL)       NOPASSWD: ALL' > /target/etc/sudoers.d/vsphere

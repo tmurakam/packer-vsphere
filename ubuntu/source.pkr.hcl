@@ -49,7 +49,7 @@ source "vsphere-iso" "ubuntu" {
 
   ssh_username = "vsphere"
   ssh_password = "vsphere"
-  ssh_timeout = "10m"
+  ssh_timeout = "30m"
   ssh_handshake_attempts = 100
 
   CPUs = 4
