@@ -6,7 +6,9 @@ build {
 
   provisioner "shell" {
     inline = [
-      "ls /"
+      # remove machine-id to avoid DHCP ip duplication
+      "rm /etc/machine-id",
+      "touch /etc/machine-id"
     ]
   }
 }
