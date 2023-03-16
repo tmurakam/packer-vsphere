@@ -21,7 +21,7 @@ variable "iso_path" {
 
 variable "storage_disk_size" {
   description = "Disk size (MB)"
-  default = 32768
+  default = 100000
 }
 
 variable "network" {
