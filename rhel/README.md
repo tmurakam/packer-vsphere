@@ -25,7 +25,12 @@ network = "VM Network"
 convert_to_template = false
 ```
 
-Then run `packer build .`
+Then run packer:
+
+    # Only once
+    $ packer init .
+    
+    $ packer build .
 
 # Note
 
