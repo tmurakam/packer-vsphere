@@ -42,7 +42,7 @@ source "vsphere-iso" "rhel" {
   boot_command = [
     "<esc><wait>",
     "vmlinuz initrd=initrd.img inst.geoloc=0 rd.driver.blacklist=dm-multipath net.ifnames=0 biosdevname=0 ",
-    "inst.ks=http://{{.HTTPIP}}:{{.HTTPPort}}/rhel8-kickstart.cfg",
+    "inst.ks=http://{{.HTTPIP}}:{{.HTTPPort}}/rhel-kickstart.cfg",
     "<enter>"
   ]
 
