@@ -1,4 +1,4 @@
-# How to run for RHEL
+# How to run for RHEL 8/9
                                  
 In rhel directory:
 
@@ -16,7 +16,6 @@ datastore = "datastore1"
 
 vm_name = "almalinux-8"
 
-os_version = "22.04"
 iso_path = "[datastore1] ISOs/AlmaLinux-8.7-x86_64-dvd.iso"
 
 storage_disk_size = 32768

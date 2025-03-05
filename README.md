@@ -6,8 +6,8 @@
 
 # How to run
 
-* [Ubuntu](./ubuntu/README.md)
-* [RHEL](./rhel/README.md)
+* [Ubuntu](./ubuntu/README.md) 20.04/22.04
+* [RHEL](./rhel/README.md) 8/9
 
 # Limitations
 

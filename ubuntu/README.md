@@ -1,4 +1,4 @@
-# How to run for Ubuntu
+# How to run for Ubuntu 20.04/22.04
                                  
 In ubuntu directory:
 
