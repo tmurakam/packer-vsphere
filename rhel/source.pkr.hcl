@@ -7,7 +7,8 @@ source "vsphere-iso" "rhel" {
   vm_name = var.vm_name
   host = var.host
 
-  guest_os_type = "rhel8_64Guest"
+  #guest_os_type = "rhel8_64Guest"
+  guest_os_type = "rhel9_64Guest"
 
   ssh_username = "vsphere"
   ssh_password = "vsphere"
