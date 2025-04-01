@@ -1,4 +1,4 @@
-# How to run for Ubuntu 20.04/22.04
+# How to run for Ubuntu 20.04/22.04/24.04
                                  
 In ubuntu directory:
 
@@ -16,8 +16,8 @@ datastore = "datastore1"
 
 vm_name = "ubuntu-server"
 
-os_version = "22.04"
-iso_path = "[datastore1] ISOs/ubuntu-22.04.2-live-server-amd64.iso"
+os_version = "24.04"
+iso_path = "[datastore1] ISOs/ubuntu-24.04.2-live-server-amd64.iso"
 
 storage_disk_size = 32768
 network = "VM Network"

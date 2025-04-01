@@ -33,6 +33,29 @@ locals {
       "boot<enter>",
       "<enter><f10><wait>"
     ]
+
+    24.04 = [
+      "<esc><esc><esc><esc>e<wait>",
+      "<del><del><del><del><del><del><del><del>",
+      "<del><del><del><del><del><del><del><del>",
+      "<del><del><del><del><del><del><del><del>",
+      "<del><del><del><del><del><del><del><del>",
+      "<del><del><del><del><del><del><del><del>",
+      "<del><del><del><del><del><del><del><del>",
+      "<del><del><del><del><del><del><del><del>",
+      "<del><del><del><del><del><del><del><del>",
+      "<del><del><del><del><del><del><del><del>",
+      "<del><del><del><del><del><del><del><del>",
+      "<del><del><del><del><del><del><del><del>",
+      "<del><del><del><del><del><del><del><del>",
+      "<del><del><del><del><del><del><del><del>",
+      "<del><del><del><del><del><del><del><del>",
+      "<del><del><del><del><del><del><del><del>",
+      "linux /casper/vmlinuz --- autoinstall ds=\"nocloud-net;seedfrom=http://{{.HTTPIP}}:{{.HTTPPort}}/\"<enter><wait>",
+      "initrd /casper/initrd<enter><wait>",
+      "boot<enter>",
+      "<enter><f10><wait>"
+    ]
   }
 }
 

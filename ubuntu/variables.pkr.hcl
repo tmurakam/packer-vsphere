@@ -11,12 +11,12 @@ variable "vm_name" {
 }
 
 variable "os_version" {
-  description = "OS version (20.04 or 22.04)"
-  default = "22.04"
+  description = "OS version (20.04, 22.04 or 24.04)"
+  default = "24.04"
 }
 
 variable "iso_path" {
-  description = "ISO path (ex. [datastore1] ISOs/ubuntu-20.04.2-live-server-amd64.iso)"
+  description = "ISO path (ex. [datastore1] ISOs/ubuntu-24.04.2-live-server-amd64.iso)"
 }
 
 variable "storage_disk_size" {
