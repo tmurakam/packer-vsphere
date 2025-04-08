@@ -11,7 +11,7 @@ variable "vm_name" {
 }
 
 variable "iso_path" {
-  description = "ISO path (ex. [datastore1] ISOs/AlmaLinux-8.4-x64_64-minimal.iso)"
+  description = "ISO path (ex. [datastore1] ISOs/AlmaLinux-8.10-x64_64-minimal.iso)"
 }
 
 variable "storage_disk_size" {
