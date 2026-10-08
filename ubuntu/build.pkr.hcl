@@ -19,6 +19,11 @@ build {
       "sudo rm -f /etc/cloud/cloud.cfg.d/99-installer.cfg /etc/cloud/cloud.cfg.d/90-installer-network.cfg /etc/cloud/cloud.cfg.d/subiquity-disable-cloudinit-networking.cfg",
       "sudo cloud-init clean --logs --seed",
 
+      # let cloud-init handle VMware guest customization instead of the legacy
+      # Customize.pl, whose 'netplan apply' hangs while the NIC is disconnected
+      # during customization on Ubuntu 24.04
+      "printf 'disable_vmware_customization: false\\ndatasource_list: [ VMware, OVF, None ]\\n' | sudo tee /etc/cloud/cloud.cfg.d/99-vmware-guest-customization.cfg",
+
       # remove machine-id to avoid DHCP ip duplication
       "sudo rm /etc/machine-id",
       "sudo touch /etc/machine-id"
