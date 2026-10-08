@@ -24,6 +24,11 @@ build {
       # during customization on Ubuntu 24.04
       "printf 'disable_vmware_customization: false\\ndatasource_list: [ VMware, OVF, None ]\\n' | sudo tee /etc/cloud/cloud.cfg.d/99-vmware-guest-customization.cfg",
 
+      # remove autoinstall/nocloud kernel parameters copied from the installer boot
+      # command, otherwise cloud-init picks NoCloud and ignores VMware customization
+      "sudo sed -i 's/^GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT=\"\"/' /etc/default/grub",
+      "sudo update-grub",
+
       # remove machine-id to avoid DHCP ip duplication
       "sudo rm /etc/machine-id",
       "sudo touch /etc/machine-id"
